@@ -30,10 +30,7 @@
   (let [ret (sh "mkdir" "-p" path)]
     (if (= (:exit ret) 0) (Boolean. true) (:err ret))))
 
-
-
-
-
-
-
-
+(defn rm [name]
+  "Deletes the file or directory (only if not empty)
+    and returns true if successful"
+  (.delete (File. name)))
