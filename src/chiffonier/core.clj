@@ -34,3 +34,16 @@
   "Deletes the file or directory (only if not empty)
     and returns true if successful"
   (.delete (File. name)))
+
+(defn exist? [name]
+  "Returns true if the file or directory exists
+    in the given path else returns false"
+  (.exists (File. name)))
+
+(defn cmod [user group other path_to_file]
+  "Modifies the file permissions for the specified file
+    with the given user group and other privilidges. The
+    user group and other are decimal values"
+  (let [privs (str user group other)
+        ret (sh "chmod" privs path_to_file)]
+    (if (= (:exit ret) 0) (Boolean. true) (:err ret))))

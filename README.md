@@ -10,6 +10,10 @@ The library currently supports the following commands:
 * mkdir `mkdir name` - Creates a directory with given name, returns the error, if any
 * mkpath `mkpath path` - Creates the provided path recursively, returns the error, if any
 * rm `rm name` - Deletes the file or directory, returns the error, if any
+* exist? `exist? name` - Returns a boolean true if the file or directory exists
+* cmod `cmod user group other file_name` - Changes the file permissions on the specified file. The user,
+group and other are decimal values/ Reutns the error, if any
+
 
 ## License
 
