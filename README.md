@@ -1,5 +1,7 @@
 # chiffonier
 
+[![Build Status](https://secure.travis-ci.org/profile/premsantosh/chiffonier.png)](http://travis-ci.org/profile/premsantosh/chiffonier)
+
 A Clojure library for file system operations. This is only for Unix/Linux (BSD) systems. If used in windows no gurantee is given for all the commands to function.
 Currently in development stage hence there might be bugs.
 
