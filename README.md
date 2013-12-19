@@ -1,8 +1,12 @@
 # chiffonier
 
-A Clojure library for file system operations. Currently in development stage hence there might be bugs.
+A Clojure library for file system operations. This is only for Unix/Linux (BSD) systems. If used in windows no gurantee is given for all the commands to function.
+Currently in development stage hence there might be bugs.
 
 ## Usage
+
+Add the dependency to your project.clj
+**com.nomad.chiffonier/chiffonier 0.1.0-SNAPSHOT**
 
 The library currently supports the following commands:
 * pwd `pwd` - Returns the current working directory
@@ -13,6 +17,7 @@ The library currently supports the following commands:
 * exist? `exist? name` - Returns a boolean true if the file or directory exists
 * cmod `cmod user group other file_name` - Changes the file permissions on the specified file. The user,
 group and other are decimal values/ Reutns the error, if any
+* last-modified `last-modified file_name` - Returns the last modified time of the file in milli seconds
 
 
 ## License
