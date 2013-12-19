@@ -1,4 +1,4 @@
-(defproject chiffonier "0.1.0-SNAPSHOT"
+(defproject com.nomad.chiffonier/chiffonier "0.1.0-SNAPSHOT"
   :description "A clojure library for file system operations"
   :url "http://github.com/premsantosh/chiffonier"
   :license {:name "Eclipse Public License"
