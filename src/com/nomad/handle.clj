@@ -1,4 +1,4 @@
-(ns chiffonier.core
+(ns com.nomad.handle
   (:use [clojure.java.shell :only [sh]])
   (:use [clojure.string :only [split]])
   (:import [java.io File FileNotFoundException])
