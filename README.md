@@ -22,6 +22,15 @@ group and other are decimal values/ Reutns the error, if any
 * **last-modified** `last-modified file_name` - Returns the last modified time of the file in milli seconds
 
 
+### Example 
+
+```
+(:require [com.nomad.handle :as fs])
+
+(fs/pwd)
+
+```
+
 ## License
 
 Copyright © 2013 Prem Santosh
