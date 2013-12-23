@@ -8,7 +8,7 @@ Currently in development stage hence there might be bugs.
 ## Usage
 
 Add the dependency to your project.clj
-**com.nomad/chiffonier 0.1.0**
+**com.nomad/chiffonier 0.1.1**
 
 The library currently supports the following commands:
 
