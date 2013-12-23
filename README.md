@@ -20,8 +20,7 @@ The library currently supports the following commands:
 | mkpath | `mkpath path` | Creates the provided path recursively, returns the error, if any |
 | rm | `rm name` | Deletes the file or directory, returns the error, if any |
 | exist? | `exist? name` | Returns a boolean true if the file or directory exists |
-| cmod | `cmod user group other file_name` | Changes the file permissions on the specified file. The user,
-group and other are decimal values/ Returns the error, if any |
+| cmod | `cmod user group other file_name` | Changes the file permissions on the specified file. The user, group and other are decimal values/ Returns the error, if any |
 | last-modified | `last-modified file_name` | Returns the last modified time of the file in milli seconds |
 | size | `size file` | Returns the size of the specified file in bytes |
 | file-join | `file-join file_one file_two` | Joins the two paths to form one unified file path |
