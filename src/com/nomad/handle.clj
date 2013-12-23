@@ -51,3 +51,17 @@
 (defn last-modified [file]
   "Returns the last modified time (in milli seconds) of the file"
   (.lastModified (File. file)))
+
+(defn size [file]
+  "Returns the size of the file in bytes"
+  (if (exist? file)
+      (.length (File. file))
+      (throw (FileNotFoundException. (str "Couldn't locate the file" file)))))
+
+(defn file-join [file_one file_two]
+  "Joins two paths to create a true unified path"
+  (let [one (clojure.string/replace file_one #"/+$" "")
+        two (clojure.string/replace file_two #"^/+" "")]
+    (str one "/" two)))
+
+
