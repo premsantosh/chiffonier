@@ -1,12 +1,13 @@
 (ns com.nomad.handle
   (:use [clojure.java.shell :only [sh]])
   (:use [clojure.string :only [split]])
-  (:import [java.io File FileNotFoundException])
+  (:import [java.io File FileNotFoundException]
+           [java.lang System])
   (:require [clojure.java.io :as cio]))
 
 
 (defn pwd []
-  "Returns the currect working directory"
+  "Returns the current working directory"
   (->
     (sh "pwd")
     (second)
@@ -15,7 +16,7 @@
     (first)))
 
 (defn ls [path]
-  "Returns a list of stirngs of files and
+  "Returns a list of strings of files and
     directories in the provided path"
   (.list (File. path)))
 
@@ -64,4 +65,6 @@
         two (clojure.string/replace file_two #"^/+" "")]
     (str one "/" two)))
 
-
+(defn home []
+  "Returns the home for the current user"
+  (System/getProperty "user.home"))

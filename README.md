@@ -24,9 +24,10 @@ The library currently supports the following commands:
 | last-modified | `last-modified file_name` | Returns the last modified time of the file in milli seconds |
 | size | `size file` | Returns the size of the specified file in bytes |
 | file-join | `file-join file_one file_two` | Joins the two paths to form one unified file path |
+| home | `home` | Returns home of the current user |
 
 
-### Example 
+### Example
 
 ```
 (:require [com.nomad.handle :as fs])
