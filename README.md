@@ -8,7 +8,7 @@ Currently in development stage hence there might be bugs.
 ## Usage
 
 Add the dependency to your project.clj
-**com.nomad/chiffonier 0.1.2**
+**com.nomad/chiffonier 0.1.3**
 
 The library currently supports the following commands:
 
@@ -23,8 +23,9 @@ The library currently supports the following commands:
 | cmod | `cmod user group other file_name` | Changes the file permissions on the specified file. The user, group and other are decimal values/ Returns the error, if any |
 | last-modified | `last-modified file_name` | Returns the last modified time of the file in milli seconds |
 | size | `size file` | Returns the size of the specified file in bytes |
-| file-join | `file-join file_one file_two` | Joins the two paths to form one unified file path |
+| file-join | `files` | Joins multiple paths to form one unified file path |
 | home | `home` | Returns home of the current user |
+| basename| `basename` | Returns the base file name from the given path |
 
 
 ### Example
@@ -35,6 +36,8 @@ The library currently supports the following commands:
 (fs/pwd)
 
 (fs/file-join "/foo/" "/bar/my_file.clj") => "/foo/bar/my_file.clj"
+
+(fs/basename "/home/foo/bar/example.clj") => "example.clj"
 
 ```
 
