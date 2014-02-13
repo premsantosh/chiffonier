@@ -78,8 +78,7 @@
 (defn file-join
   "Joins multiple paths to create a true unified path"
   [& files]
-  (let [new-files (map (fn [file] (clojure.string/replace file #"/" "")) files)]
-    (reduce (fn [a b] (str a "/" b)) new-files)))
+  (clojure.string/join "/" (filter (fn [x] (not (empty? x)))(flatten (map (fn [x] (clojure.string/split x #"/")) files)))))
 
 (defn home
   "Returns the home for the current user"
