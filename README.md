@@ -19,6 +19,7 @@ The library currently supports the following commands:
 | mkdir | `mkdir name` | Creates a directory with given name, returns the error, if any |
 | mkpath | `mkpath path` | Creates the provided path recursively, returns the error, if any |
 | rm | `rm name` | Deletes the file or directory, returns the error, if any |
+| rm-force| `rm-force` | Force deletes the file or the directory without checking if its empty or not |
 | exist? | `exist? name` | Returns a boolean true if the file or directory exists |
 | cmod | `cmod user group other file_name` | Changes the file permissions on the specified file. The user, group and other are decimal values/ Returns the error, if any |
 | last-modified | `last-modified file_name` | Returns the last modified time of the file in milli seconds |
